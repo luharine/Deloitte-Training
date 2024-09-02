@@ -1,0 +1,50 @@
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process product details</title>
+ </head>
+ <body>
+
+    Product<input id = 'ip1'>
+    <br>
+ <br>   Unit Price <input id = 'ip2'>
+ <br>
+ <br> 
+   Quantity <input id = 'ip3'>
+   <button id="calc" onclick="handleClick()">Get Total</button>
+   <p id="res"></p>
+
+
+    
+ </body>
+ <script>
+   function handleClick(){
+    var unitprice = parseInt(document.getElementById('ip2').value);
+    var quantity = parseInt(document.getElementById('ip3').value);
+    var resu = document.getElementById("res");
+    console.log(unitprice * quantity);
+    
+    if(quantity>10)
+   {
+        resu.innerHTML=unitprice*0.9*quantity;
+   }
+  else if(quantity>20)
+   {
+        resu.innerHTML=unitprice*0.85*quantity;
+   }
+  else if(quantity>30)
+   {
+        resu.innerHTML=unitprice*0.8*quantity;
+   }
+   else{
+    resu.innerHTML=unitprice*quantity;
+   }
+
+   }
+ </script>
+ </html>                

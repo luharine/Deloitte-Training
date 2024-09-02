@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id = "n1" type="text" >
+    <input id = "n2" type="text">
+    <button id="+" onclick="updateOperator(event)">+</button>
+    <button id="-" onclick="updateOperator(event)">-</button>
+    <button id="*" onclick="updateOperator(event)">/</button>
+    <button id="/" onclick="updateOperator(event)">*</button>
+    <p id ='r'></p>
+</body>
+<script>
+ function updateOperator(event){
+    var op= event.target.id;
+    console.log(op); 
+    var ipo = parseInt(document.getElementById("n1").value);
+    console.log(ipo);
+    
+    var ipa = parseInt(document.getElementById("n2").value);
+    console.log(ipa);
+    var res = document.getElementById('r');   
+    
+    if(op == '+')
+    {
+        res.innerText = ipo+ipa;
+    }
+
+    else if(op == '-'){
+           res.innerText=ipo-ipa;
+    }
+    
+    else if (op=='/'){
+        if(ipa == 0){
+            res.innerHTML="enter non zero value in second input box"
+        }
+        else{
+        res.innerText=ipo/ipa;
+        }
+        
+    }
+    else if (op =='*')
+    {
+        res.innerText=ipo*ipa;
+
+    }
+
+   
+    
+    }
+
+
+</script>
+</html>
