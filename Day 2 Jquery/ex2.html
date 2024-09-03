@@ -1,0 +1,60 @@
+New! Keyboard shortcuts … Drive keyboard shortcuts have been updated to give you first-letters navigation
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Working with jQuery</h3>
+    <hr />
+
+
+    <fieldset>
+        <legend>User Login </legend>
+
+        User Id : <input type="text" id="t1" />
+        <br /> <br />
+        Password : <input type="password" id="t2" />
+        <br /><br />
+        <input type="button" onclick="f1()" value="Login" />
+        <p id="p1"></p>
+    </fieldset>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js">        
+    </script>
+
+
+    <script>
+
+
+       
+        function f1() {            
+            let userId = $("#t1").val();
+            let password = $("#t2").val(); 
+
+            if (userId == "admin" &&  password == "admin123") 
+            {
+               $("#p1").html("Welcome Admin User");   
+               $("#p1").css("background-color","green");
+               $("#p1").css("color","white"); 
+            }
+            else
+            {
+                $("#p1").html("Invalid User Id or Password");                
+                $("#p1").css("background-color","red");
+                $("#p1").css("color","white");
+            } 
+            
+        }
+
+    </script>
+
+</body>
+
+</html>

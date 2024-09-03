@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id = "n1" type="text" >
+    <input id = "n2" type="text">
+    <button id="a" >+</button>
+    <button id="b" >-</button>
+    <button id="c" >/</button>
+    <button id="d" >*</button> 
+    
+    <p id ='r'></p>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" > </script> </script>
+<script>
+    
+ $("#a").click( function(event){
+    var ip1 = parseInt($("#n1").val());
+    var ip2 = parseInt($("#n2").val());
+ $("#r").html(ip1+ip2);
+}
+);
+
+$("#b").click( function(event){
+    var ip1 = parseInt($("#n1").val());
+    var ip2 = parseInt($("#n2").val());
+ $("#r").html(ip1-ip2);
+}
+);
+
+$("#c").click( function(event){
+    var ip1 = parseInt($("#n1").val());
+    var ip2 = parseInt($("#n2").val());
+ $("#r").html(ip1/ip2);
+}
+);
+$("#d").click( function(event){
+    var ip1 = parseInt($("#n1").val());
+    var ip2 = parseInt($("#n2").val());
+    console.log(ip1*ip2);
+    var res = ip1*ip2;
+     $("#r").html(ip1*ip2);
+}
+);
+ 
+ 
+ 
+ 
+
+
+
+</script>
+</html>
